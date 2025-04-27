@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Split Bill</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Split Bill</h1>
+
+    <div class="toggle-theme">
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider round"></span>
+      </label>
+      <span id="themeLabel">Terang</span>
+    </div>
+
+    <!-- Input total belanja -->
+    <section class="highlight">
+      <h2>Total Harga Belanja</h2>
+      <input type="number" id="totalPrice" placeholder="Masukkan total harga belanja" />
+    </section>
+
+    <!-- Tambah Menu -->
+    <section>
+      <h2>1. Tambah Menu</h2>
+      <div class="form-group">
+        <input type="text" id="menuName" placeholder="Nama Menu" />
+        <input type="number" id="menuPrice" placeholder="Harga Menu" />
+        <button onclick="addMenu()">Tambah Menu</button>
+      </div>
+      <ul id="menuList"></ul>
+    </section>
+
+    <!-- Tambah Orang -->
+    <section>
+      <h2>2. Tambah Orang</h2>
+      <div class="form-group">
+        <input type="text" id="personName" placeholder="Nama Orang" />
+        <div id="menuCheckboxes"></div>
+        <button onclick="addPerson()">Tambah Orang</button>
+      </div>
+    </section>
+
+    <!-- Hasil -->
+    <section>
+      <h2>3. Hasil Split Bill</h2>
+      <div id="billResult" class="bill-result"></div>
+    </section>
+
+    <div class="print-area">
+      <button onclick="window.print()">🖨️ Cetak Struk</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
